@@ -3,8 +3,14 @@
  * 
  */
 
+/**
+ * 
+ * @author Jonas Stadler
+ * @version 1.0
+ */
 public class Loesung40 {
 
+	private final String ZTAG = "test";
 	/**
 	 * Wandele eine Zahl zwischen 1 und 3000 (jeweils inklusive) in ihre Darstellung im roemischen Zahlsystem um.
 	 * 
@@ -13,12 +19,14 @@ public class Loesung40 {
 	 * @return String Referenz auf die Repraesentation der umgewandelten Zahl.
 	 */
 	public String convertNumber(int n) {
-		return null;
-
-		/*
-		 * Hier ist die Loesung zu Aufgabe 38 einzutragen.
-		 */
-
+		String number = String.valueOf(n);
+		String romanNumber ="";
+		
+		if(number.length() > 4){
+			number = number.substring(0, 4);
+		}
+		return number;
+	//	return romanNumber;
 	}
 
 	/**
@@ -36,6 +44,7 @@ public class Loesung40 {
 		System.out.println("1000 = " + convertNumber(1000)); // Sollte "M" ergeben.
 		System.out.println("1498 = " + convertNumber(1498)); // Sollte "MCDXCVIII" ergeben.
 		System.out.println("2999 = " + convertNumber(2999)); // Sollte "MMCMXCIX" ergeben.
+		//System.out.println("2999 = " + convertNumber(2900909)); // Sollte "MMCMXCIX" ergeben.
 
 	}
 
