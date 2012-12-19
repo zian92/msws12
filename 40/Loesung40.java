@@ -204,6 +204,7 @@ public class Loesung40 {
 		System.out.println("1000 = " + convertNumber(1000)); // Sollte "M" ergeben.
 		System.out.println("1498 = " + convertNumber(1498)); // Sollte "MCDXCVIII" ergeben.
 		System.out.println("2999 = " + convertNumber(2999)); // Sollte "MMCMXCIX" ergeben.
+		System.out.println("3999 = " + convertNumber(3999)); // Sollte "MMMCMXCIX" ergeben.
 	}
 
 	public static void main(String[] args) {
