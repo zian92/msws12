@@ -1,5 +1,5 @@
 /**
- * Uebungsgruppe _____ (Namen der Teilnehmer)
+ * Uebungsgruppe G6E (Namen der Teilnehmer)
  * 
  */
 
@@ -19,22 +19,35 @@ public class ImagePuzzle {
 
 		// Falls keine Datei ausgewaehlt wurde, ist nichts zu tun.
 		if (input != null) {
-
+			Pixel[] pix = null;
 			// Zeige das Bild zur Kontrolle an.
 			input.show();
-
-			/*
-			 * Hier ist die Loesung zu Aufgabe 37(a) einzutragen.
-			 */
-
-			// Zeige das auszugebende Bild an.
-			output.show();
+			try {
+				pix = input.getPixels();
+				System.out.println("pixel bekommen");
+				
+			for (Pixel p : pix) {
+				String s = "X: " + p.getX() + " Y: " + p.getY();
+				System.out.println("start " + s);
+				p.setBlue(p.getBlue() * 20);
+				p.setGreen(p.getGreen() * 20);
+				p.setRed(0);
+				System.out.println("end   " + s);
+			}
+			output.setPictureFrame(pix);
+				// Zeige das auszugebende Bild an.
+				output.show();
 
 			// Schreibe das auszugebende Bild in eine Datei.
-			String directory = ""; // Hier muss ein gueltiger Verzeichnisname
+			String directory = "./"; // Hier muss ein gueltiger Verzeichnisname
 			// eingesetzt werden,
 			// z.B. "C:\" oder "/Users/Shared/" oder ...
 			output.write(directory + "black-puzzle-solution.png");
+			} catch (Exception e) {
+				System.out.println("error!");
+				e.printStackTrace();
+			}
+			
 		}
 	}
 
@@ -77,7 +90,7 @@ public class ImagePuzzle {
 		ImagePuzzle ip = new ImagePuzzle();
 
 		ip.solveBlackPuzzle(); // Loese Aufgabe 37(a).
-		ip.solveGrassPuzzle(); // Loese Aufgabe 37(b).
+		//ip.solveGrassPuzzle(); // Loese Aufgabe 37(b).
 
 	}
 
