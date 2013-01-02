@@ -2,6 +2,7 @@ import java.io.File;
 
 import org.mediacomputation.givenclasses.FileChooser;
 import org.mediacomputation.givenclasses.Picture;
+import org.mediacomputation.givenclasses.Pixel;
 
 /**
  * Uebungsgruppe _____ (Namen der Teilnehmer)
@@ -40,16 +41,45 @@ public class ImageScaler {
 			// Zeige das Bild zur Kontrolle an.
 			input.show();
 
-			/*
-			 * Hier ist die Loesung zu Aufgabe 38 einzutragen.
-			 */
+			int newx = (int) java.lang.Math.floor(input.getWidth() * (xScale));
+			int newy = (int) java.lang.Math.floor(input.getHeight() * (yScale));
+			Pixel[] pix = input.getPixels();
 
+			int x = (int) java.lang.Math.floor(input.getWidth() / newx);
+			int y = 0;
+			for (Pixel p : pix) {
+				System.out.println("Start X:" + p.getX() + ", Y: " + p.getY());
+				if (true) { // prueft, ob für die scalierung relevanter Pixel
+					System.out.println("Use Pixel");
+					output = new Picture(newx, newy);
+					output.setBasicPixel(p.getX(), p.getY(), this.makeRGB(p.getRed(), p.getGreen(), p.getBlue()));
+				}
+
+			}
 			// Zeige das Bild zur Kontrolle an.
+			input.hide();
 			output.show();
 
 		}
 
 		return output;
+	}
+
+	/**
+	 * Creates a RGB value
+	 * 
+	 * @author Jonas Stadler
+	 * @version 1.0
+	 * @param red
+	 *            red
+	 * @param green
+	 *            green
+	 * @param blue
+	 *            blue
+	 * @return
+	 */
+	private int makeRGB(int red, int green, int blue) {
+		return red * 65536 + green * 256 + blue;
 	}
 
 	/**
