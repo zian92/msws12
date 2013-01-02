@@ -40,7 +40,7 @@ public class ImagePuzzle {
 				int b = (p.getBlue() * 20);
 				int g = (p.getGreen() * 20);
 				int r = 0;
-				output.setBasicPixel(p.getX(), p.getY(), r * 65536 + g * 256 + b); // set a pixel at described position, with rgb value
+				output.setBasicPixel(p.getX(), p.getY(), this.makeRGB(r,g,b)); // set a pixel at described position, with rgb value
 				// System.out.println("end   " + s);
 			}
 			// Zeige das auszugebende Bild an.
@@ -90,7 +90,7 @@ public class ImagePuzzle {
 				}
 				int g = 0;
 				int r = b;
-				output.setBasicPixel(p.getX(), p.getY(), r * 65536 + g * 256 + b); // set a pixel at described position, with rgb value
+				output.setBasicPixel(p.getX(), p.getY(), this.makeRGB(r,g,b)); // set a pixel at described position, with rgb value
 				// System.out.println("end   " + s);
 			}
 			// Zeige das auszugebende Bild an.
@@ -110,6 +110,19 @@ public class ImagePuzzle {
 				e.printStackTrace();
 			}
 		}
+	}
+	
+	/**
+	 * Creates a RGB value
+	 * @author Jonas Stadler
+	 * @version 1.0
+	 * @param red red
+	 * @param green green
+	 * @param blue blue
+	 * @return
+	 */
+	private int makeRGB(int red, int green, int blue) {
+		return red * 65536 + green * 256 + blue;
 	}
 
 	public static void main(String args[]) {
