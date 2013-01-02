@@ -1,5 +1,12 @@
+
+
 import java.io.File;
 import java.io.IOException;
+
+import org.mediacomputation.givenclasses.FileChooser;
+import org.mediacomputation.givenclasses.Picture;
+import org.mediacomputation.givenclasses.Pixel;
+
 
 /**
  * Uebungsgruppe G6E (Namen der Teilnehmer)
@@ -10,7 +17,7 @@ public class ImagePuzzle {
 	/**
 	 * Loesung der Aufgabe 37(a) / Blatt 10 / Wintersemester 2012/2013.
 	 */
-	public void solveBlackPuzzle(String directory) {
+	public void solveBlackPuzzle() {
 
 		// Erstelle Dialog zur Auswahl einer Bilddatei und lade das
 		// ausgewaehlte Bild.
@@ -41,6 +48,9 @@ public class ImagePuzzle {
 			output.show();
 
 			try {
+				String directory = new File("").getAbsolutePath() + "\\"; // Hier muss ein gueltiger Verzeichnisname
+				// eingesetzt werden,
+				// z.B. "C:\" oder "/Users/Shared/" oder ...
 				output.writeOrFail(directory + "black-puzzle-solution.png");
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -52,7 +62,7 @@ public class ImagePuzzle {
 	/**
 	 * Loesung der Aufgabe 37(b) / Blatt 10 / Wintersemester 2012/2013.
 	 */
-	public void solveGrassPuzzle(String directory) {
+	public void solveGrassPuzzle() {
 
 		// Erstelle Dialog zur Auswahl einer Bilddatei und lade das
 		// ausgewaehlte Bild.
@@ -92,6 +102,9 @@ public class ImagePuzzle {
 			// eingesetzt werden,
 			// z.B. "C:\" oder "/Users/Shared/" oder ...
 			try {
+				String directory = new File("").getAbsolutePath() + "\\"; // Hier muss ein gueltiger Verzeichnisname
+				// eingesetzt werden,
+				// z.B. "C:\" oder "/Users/Shared/" oder ...
 				output.writeOrFail(directory + "grass-puzzle-solution.png");
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -103,13 +116,9 @@ public class ImagePuzzle {
 
 		ImagePuzzle ip = new ImagePuzzle();
 		// Schreibe das auszugebende Bild in eine Datei.
-		String directory = new File("").getAbsolutePath(); // Hier muss ein gueltiger Verzeichnisname
-		directory = directory + "\\";
-		// eingesetzt werden,
-		// z.B. "C:\" oder "/Users/Shared/" oder ...
-		// ip.solveBlackPuzzle(directory); // Loese Aufgabe 37(a).
-		ip.solveGrassPuzzle(directory); // Loese Aufgabe 37(b).
-		//System.exit(0);
+		// ip.solveBlackPuzzle(); // Loese Aufgabe 37(a).
+		ip.solveGrassPuzzle(); // Loese Aufgabe 37(b).
+		// System.exit(0);
 	}
 
 }
