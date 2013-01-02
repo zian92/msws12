@@ -17,7 +17,7 @@ public class Loesung40 {
 	 * @return
 	 */
 	private String convertZehner(String temp) {
-		switch (Integer.valueOf(temp)) {
+		switch (Integer.valueOf(temp)) { // unterscheidung von 0 bis 9
 			case 1:
 				temp = "X";
 				break;
@@ -49,7 +49,7 @@ public class Loesung40 {
 				temp = "";
 				break;
 		}
-		return temp;
+		return temp; // returns string value of roman zehner
 	}
 
 	/**
@@ -59,7 +59,7 @@ public class Loesung40 {
 	 * @return
 	 */
 	private String convertHunderter(String temp) {
-		switch (Integer.valueOf(temp)) {
+		switch (Integer.valueOf(temp)) { // unterscheidet hunterter von 1 bis 9
 			case 1:
 				temp = "C";
 				break;
@@ -91,7 +91,7 @@ public class Loesung40 {
 				temp = "";
 				break;
 		}
-		return temp;
+		return temp;// returns string value of roman hunderter
 	}
 
 	/**
@@ -101,7 +101,7 @@ public class Loesung40 {
 	 * @return
 	 */
 	private String convertTausender(String temp) {
-		switch (Integer.valueOf(temp)) {
+		switch (Integer.valueOf(temp)) {// unterscheidet tausender
 			case 1:
 				temp = "M";
 				break;
@@ -115,7 +115,7 @@ public class Loesung40 {
 				temp = "";
 				break;
 		}
-		return temp;
+		return temp;// returns string value of roman tausender
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class Loesung40 {
 	 * @return
 	 */
 	private String convertEiner(String temp) {
-		switch (Integer.valueOf(temp)) {
+		switch (Integer.valueOf(temp)) {// unterscheidet einer von 1 bis 9
 			case 1:
 				temp = "I";
 				break;
@@ -157,7 +157,7 @@ public class Loesung40 {
 				temp = "";
 				break;
 		}
-		return temp;
+		return temp;// returns string value of roman einer
 	}
 
 	/**
@@ -168,26 +168,26 @@ public class Loesung40 {
 	 * @return String Referenz auf die Repraesentation der umgewandelten Zahl.
 	 */
 	public String convertNumber(int n) {
-		String number = String.valueOf(n);
-		String romanNumber = "";
+		String number = String.valueOf(n); // wandelt n in string um
+		String romanNumber = ""; // initialisiere romanNumber
 		if (number.length() > 4) {
-			number = number.substring(0, 4);
+			number = number.substring(0, 4); // falls number länger als 4 zeichen, wird number auf 4 reduziert
 		}
 
 		if (Integer.valueOf(number) > 999) {
-			romanNumber = romanNumber + this.convertTausender(number.substring(0, 1));
-			number = number.substring(1);
+			romanNumber = romanNumber + this.convertTausender(number.substring(0, 1)); // wenn der Wert der zahl groesser als 999 ist, werden die tausender convertiert
+			number = number.substring(1); // loescht die erste stelle des Strings
 		}
 		if (Integer.valueOf(number) > 99) {
-			romanNumber = romanNumber + this.convertHunderter(number.substring(0, 1));
-			number = number.substring(1);
+			romanNumber = romanNumber + this.convertHunderter(number.substring(0, 1));// wenn der Wert der zahl groesser als 999 ist, werden die hunderter convertiert
+			number = number.substring(1);// loescht die erste stelle des Strings
 		}
 		if (Integer.valueOf(number) > 9) {
-			romanNumber = romanNumber + this.convertZehner(number.substring(0, 1));
-			number = number.substring(1);
+			romanNumber = romanNumber + this.convertZehner(number.substring(0, 1));// wenn der Wert der zahl groesser als 999 ist, werden die zehner convertiert
+			number = number.substring(1);// loescht die erste stelle des Strings
 		}
-		romanNumber = romanNumber + this.convertEiner(number);
-		return romanNumber;
+		romanNumber = romanNumber + this.convertEiner(number);// convertiert einer
+		return romanNumber;// gibt roemische zahl wieder
 	}
 
 	/**

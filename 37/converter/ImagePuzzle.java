@@ -1,12 +1,9 @@
-
-
 import java.io.File;
 import java.io.IOException;
 
 import org.mediacomputation.givenclasses.FileChooser;
 import org.mediacomputation.givenclasses.Picture;
 import org.mediacomputation.givenclasses.Pixel;
-
 
 /**
  * Uebungsgruppe G6E (Namen der Teilnehmer)
@@ -33,14 +30,14 @@ public class ImagePuzzle {
 			input.show();
 			pix = input.getPixels();
 			System.out.println("pixel bekommen");
-			output = input;
-			for (Pixel p : pix) {
-				String s = "X: " + p.getX() + " Y: " + p.getY();
-				System.out.println("start " + s);
-				int b = (p.getBlue() * 20);
-				int g = (p.getGreen() * 20);
-				int r = 0;
-				output.setBasicPixel(p.getX(), p.getY(), this.makeRGB(r,g,b)); // set a pixel at described position, with rgb value
+			output = new Picture(input.getHeight(), input.getWidth()); // initialisiere output -> glieche bildgröße
+			for (Pixel p : pix) { // arbeitet alle pix ab
+				String s = "X: " + p.getX() + " Y: " + p.getY(); // log hilfe
+				System.out.println("start " + s); // log
+				int b = (p.getBlue() * 20); // blauer Farbwert verzwnazigfacht
+				int g = (p.getGreen() * 20); // blauer Farbwert verzwnazigfacht
+				int r = 0; // kein roter farbwert
+				output.setBasicPixel(p.getX(), p.getY(), this.makeRGB(r, g, b)); // set a pixel at described position, with rgb value
 				// System.out.println("end   " + s);
 			}
 			// Zeige das auszugebende Bild an.
@@ -76,21 +73,21 @@ public class ImagePuzzle {
 			Pixel[] pix = null;
 			// Zeige das Bild zur Kontrolle an.
 			input.show();
-			pix = input.getPixels();
+			pix = input.getPixels(); // get pixel
 			System.out.println("pixel bekommen");
-			output = input;
-			for (Pixel p : pix) {
-				String s = "X: " + p.getX() + " Y: " + p.getY();
+			output = new Picture(input.getWidth(), input.getHeight());
+			for (Pixel p : pix) { // arbeitet alle pix ab
+				String s = "X: " + p.getX() + " Y: " + p.getY(); // log helperstring
 				System.out.println("start " + s);
-				int b = p.getBlue();
-				if (b < 16) {
-					b = b * 16;
+				int b = p.getBlue(); // übernimmt blauen farbwert
+				if (b < 16) { //
+					b = b * 16; // wenn blauer wert groesser als 16, versechzehnfache den wert
 				} else {
-					b = 0;
+					b = 0; // wenn blauer Wert kleiner als 16, kein blauer wert
 				}
-				int g = 0;
-				int r = b;
-				output.setBasicPixel(p.getX(), p.getY(), this.makeRGB(r,g,b)); // set a pixel at described position, with rgb value
+				int g = 0; // kein gruener wert
+				int r = b;// kein roter wert
+				output.setBasicPixel(p.getX(), p.getY(), this.makeRGB(r, g, b)); // set a pixel at described position, with rgb value
 				// System.out.println("end   " + s);
 			}
 			// Zeige das auszugebende Bild an.
@@ -111,18 +108,22 @@ public class ImagePuzzle {
 			}
 		}
 	}
-	
+
 	/**
 	 * Creates a RGB value
+	 * 
 	 * @author Jonas Stadler
 	 * @version 1.0
-	 * @param red red
-	 * @param green green
-	 * @param blue blue
+	 * @param red
+	 *            red
+	 * @param green
+	 *            green
+	 * @param blue
+	 *            blue
 	 * @return
 	 */
 	private int makeRGB(int red, int green, int blue) {
-		return red * 65536 + green * 256 + blue;
+		return red * 65536 + green * 256 + blue; //creates a new rgb value and returns ist.
 	}
 
 	public static void main(String args[]) {
