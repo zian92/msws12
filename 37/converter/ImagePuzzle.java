@@ -30,14 +30,14 @@ public class ImagePuzzle {
 			input.show();
 			pix = input.getPixels();
 			System.out.println("pixel bekommen");
-			output = new Picture(input.getHeight(), input.getWidth()); // initialisiere output -> glieche bildgröße
+			output = new Picture( input.getWidth(),input.getHeight()); // initialisiere output -> glieche bildgröße
 			for (Pixel p : pix) { // arbeitet alle pix ab
 				String s = "X: " + p.getX() + " Y: " + p.getY(); // log hilfe
 				System.out.println("start " + s); // log
 				int b = (p.getBlue() * 20); // blauer Farbwert verzwnazigfacht
 				int g = (p.getGreen() * 20); // blauer Farbwert verzwnazigfacht
 				int r = 0; // kein roter farbwert
-				output.setBasicPixel(p.getX(), p.getY(), this.makeRGB(r, g, b)); // set a pixel at described position, with rgb value
+				output.setBasicPixel(p.getX(), p.getY(), r * 65536 + g * 256 + b); // set a pixel at described position, with rgb value
 				// System.out.println("end   " + s);
 			}
 			// Zeige das auszugebende Bild an.
@@ -123,14 +123,14 @@ public class ImagePuzzle {
 	 * @return
 	 */
 	private int makeRGB(int red, int green, int blue) {
-		return red * 65536 + green * 256 + blue; //creates a new rgb value and returns ist.
+		return red * 65536 + green * 256 + blue; // creates a new rgb value and returns ist.
 	}
 
 	public static void main(String args[]) {
 
 		ImagePuzzle ip = new ImagePuzzle();
 		// Schreibe das auszugebende Bild in eine Datei.
-		// ip.solveBlackPuzzle(); // Loese Aufgabe 37(a).
+		ip.solveBlackPuzzle(); // Loese Aufgabe 37(a).
 		ip.solveGrassPuzzle(); // Loese Aufgabe 37(b).
 		// System.exit(0);
 	}
