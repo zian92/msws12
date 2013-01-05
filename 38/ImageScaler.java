@@ -43,36 +43,36 @@ public class ImageScaler {
 			// TODO faktoren neu berechnen!!!!!!!!!!!!!!
 			// TODO
 			// TODO
-			int newScaleX = 0;
-			int newScaleY = 0;
-			int newSX = (int) java.lang.Math.floor(input.getWidth() * (xScale));
-			int newSY = (int) java.lang.Math.floor(input.getHeight() * (yScale));
+
+			int newScaleX = (int) (xScale + 0.5);
+			int newScaleY = (int) (yScale + 0.5);
+			int newSX = (int) (input.getWidth() * (xScale));
+			int newSY = (int) (input.getHeight() * (yScale));
 
 			if (newScaleX == newScaleY && newScaleX == 1) return input; // falls keine saklierung vorgenomen wird
-			output = new Picture(newSX, newSY);
+
 			// int x = (int) java.lang.Math.floor(input.getWidth() / newx); // x pixel scale ->
 			// int y = (int) java.lang.Math.floor(input.getHeight() / newy); // y pixel scale
 
-			int sdUPixelX = 0;
+			output = new Picture(newSX, newSY);
+			int sdUPixelX = 0;// berechnen
 			int sdCPixelX = 0;
 			int sdAPixelx = 0;
-			int sdUPixelY = 0;
+			int sdUPixelY = 0;// berechnen
 			int sdCPixelY = 0;
 			int sdAPixelY = 0;
-			
+
 			if (newScaleX < 1) {
-				sdUPixelX = 0;
-				sdCPixelX = 0;
+				sdUPixelX = input.getWidth() / (input.getWidth() * newScaleX);
 			}
 			if (newScaleY < 1) {
-				sdUPixelY = 0;
-				sdCPixelY = 0;
+				sdUPixelY = input.getHeight() / (input.getHeight() * newScaleY);
 			}
 
 			for (int i = 0; i < input.getWidth(); i++) { // breite
 				for (int j = 0; j < input.getHeight(); j++) { // höhe
-
 					Pixel p = input.getPixel(i, j);
+					System.out.println("Work X: " + i + " Y: " + j);
 					if (newSX < 1) { // verkleinerung breite
 						if (sdCPixelX < sdUPixelX) {
 							sdCPixelX++;
@@ -130,7 +130,6 @@ public class ImageScaler {
 	 * Loesung der Aufgabe 38 / Blatt 10 / Wintersemester 2012/2013.
 	 */
 	public void run() {
-
 		Picture output;
 
 		String directory = new File("").getAbsolutePath() + "\\"; // Hier muss ein gueltiger Verzeichnisname
@@ -152,7 +151,6 @@ public class ImageScaler {
 	}
 
 	public static void main(String[] args) {
-
 		ImageScaler is = new ImageScaler();
 		is.run();
 
