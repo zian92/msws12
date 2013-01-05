@@ -40,19 +40,11 @@ public class ImageScaler {
 			// Zeige das Bild zur Kontrolle an.
 			input.show();
 
-			// TODO faktoren neu berechnen!!!!!!!!!!!!!!
-			// TODO
-			// TODO
-
 			int newScaleX = (int) (xScale + 0.5);
 			int newScaleY = (int) (yScale + 0.5);
 			int newSX = (int) (input.getWidth() * (xScale));
 			int newSY = (int) (input.getHeight() * (yScale));
-
 			if (newScaleX == newScaleY && newScaleX == 1) return input; // falls keine saklierung vorgenomen wird
-
-			// int x = (int) java.lang.Math.floor(input.getWidth() / newx); // x pixel scale ->
-			// int y = (int) java.lang.Math.floor(input.getHeight() / newy); // y pixel scale
 
 			output = new Picture(newSX, newSY);
 			int sdUPixelX = 0;// berechnen
@@ -99,13 +91,10 @@ public class ImageScaler {
 					}
 				}
 			}
-
 			// Zeige das Bild zur Kontrolle an.
 			input.hide();
 			output.show();
-
 		}
-
 		return output;
 	}
 
