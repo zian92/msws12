@@ -43,18 +43,19 @@ public class ImageScaler {
 
 			int newx = (int) java.lang.Math.floor(input.getWidth() * (xScale));
 			int newy = (int) java.lang.Math.floor(input.getHeight() * (yScale));
-			Pixel[] pix = input.getPixels();
 
-			int x = (int) java.lang.Math.floor(input.getWidth() / newx);
-			int y = 0;
-			for (Pixel p : pix) {
-				System.out.println("Start X:" + p.getX() + ", Y: " + p.getY());
-				if (true) { // prueft, ob für die scalierung relevanter Pixel
-					System.out.println("Use Pixel");
-					output = new Picture(newx, newy);
-					output.setBasicPixel(p.getX(), p.getY(), this.makeRGB(p.getRed(), p.getGreen(), p.getBlue()));
+			int x = (int) java.lang.Math.floor(input.getWidth() / newx); // x pixel scale ->
+			int y = (int) java.lang.Math.floor(input.getHeight() / newy); // y pixel scale
+			// skalierung hoch
+			for (int i = 0; i < input.getWidth(); i++) {
+				for (int j = 0; j < input.getHeight(); j++) {
+					Pixel p = input.getPixel(i, j);
+					System.out.println("Pixel X: " + i + " Y: " + j);
+					for (int k = 0; k < y; k++) {// y streckung
+						output = new Picture(i, j + k);
+						output.setBasicPixel(p.getX(), p.getY(), this.makeRGB(p.getRed(), p.getGreen(), p.getBlue()));
+					}
 				}
-
 			}
 			// Zeige das Bild zur Kontrolle an.
 			input.hide();
