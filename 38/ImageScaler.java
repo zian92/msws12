@@ -41,22 +41,47 @@ public class ImageScaler {
 			// Zeige das Bild zur Kontrolle an.
 			input.show();
 
-			int newx = (int) java.lang.Math.floor(input.getWidth() * (xScale));
-			int newy = (int) java.lang.Math.floor(input.getHeight() * (yScale));
+			// TODO faktoren neu berechnen!!!!!!!!!!!!!!
+			// TODO
+			// TODO
+			int newSX = (int) java.lang.Math.floor(input.getWidth() * (xScale));
+			int newSY = (int) java.lang.Math.floor(input.getHeight() * (yScale));
 
-			int x = (int) java.lang.Math.floor(input.getWidth() / newx); // x pixel scale ->
-			int y = (int) java.lang.Math.floor(input.getHeight() / newy); // y pixel scale
-			// skalierung hoch
-			for (int i = 0; i < input.getWidth(); i++) {
-				for (int j = 0; j < input.getHeight(); j++) {
+			output = new Picture(newSX,newSY);
+			// int x = (int) java.lang.Math.floor(input.getWidth() / newx); // x pixel scale ->
+			// int y = (int) java.lang.Math.floor(input.getHeight() / newy); // y pixel scale
+
+			for (int i = 0; i < input.getWidth(); i++) { // breite
+				for (int j = 0; j < input.getHeight(); j++) { // höhe
 					Pixel p = input.getPixel(i, j);
-					System.out.println("Pixel X: " + i + " Y: " + j);
-					for (int k = 0; k < y; k++) {// y streckung
-						output = new Picture(i, j + k);
-						output.setBasicPixel(p.getX(), p.getY(), this.makeRGB(p.getRed(), p.getGreen(), p.getBlue()));
+					if (newSX < 1) { // verkleinerung breite
+
+					} else { // vergrößerung breite
+						for (int k = 0; k < newSX; k++) {
+							output.setBasicPixel(i+k, j, this.makeRGB(p.getRed(), p.getGreen(), p.getBlue()));
+						}
+					}
+
+					if (newSY < 1) {// verkleinerun höhe
+
+					} else {// vergrößerung höhe
+						for (int k = 0; k < newSY; k++) {
+							output.setBasicPixel(i, j+k, this.makeRGB(p.getRed(), p.getGreen(), p.getBlue()));
+						}
 					}
 				}
 			}
+			// for (int i = 0; i < input.getWidth(); i++) {
+			// for (int j = 0; j < input.getHeight(); j++) {
+			// Pixel p = input.getPixel(i, j);
+			// System.out.println("Pixel X: " + i + " Y: " + j);
+			// for (int k = 0; k < y; k++) {// y streckung
+			// output = new Picture(i, j + k);
+			// output.setBasicPixel(p.getX(), p.getY(), this.makeRGB(p.getRed(), p.getGreen(), p.getBlue()));
+			// }
+			// }
+			// }
+
 			// Zeige das Bild zur Kontrolle an.
 			input.hide();
 			output.show();
