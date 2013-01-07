@@ -37,31 +37,64 @@ public class ImageScaler {
 
 		// Falls keine Datei ausgewaehlt wurde, ist nichts zu tun.
 		if (input != null) {
-
 			// Zeige das Bild zur Kontrolle an.
 			input.show();
 
-			int newx = (int) java.lang.Math.floor(input.getWidth() * (xScale));
-			int newy = (int) java.lang.Math.floor(input.getHeight() * (yScale));
-			Pixel[] pix = input.getPixels();
+			int newScaleX = (int) (xScale + 0.5);
+			int newScaleY = (int) (yScale + 0.5);
+			int newSX = (int) (input.getWidth() * (xScale));
+			int newSY = (int) (input.getHeight() * (yScale));
+			if (newScaleX == newScaleY && newScaleX == 1) return input; // falls keine saklierung vorgenomen wird
 
-			int x = (int) java.lang.Math.floor(input.getWidth() / newx);
-			int y = 0;
-			for (Pixel p : pix) {
-				System.out.println("Start X:" + p.getX() + ", Y: " + p.getY());
-				if (true) { // prueft, ob für die scalierung relevanter Pixel
-					System.out.println("Use Pixel");
-					output = new Picture(newx, newy);
-					output.setBasicPixel(p.getX(), p.getY(), this.makeRGB(p.getRed(), p.getGreen(), p.getBlue()));
+			output = new Picture(newSX, newSY);
+			int sdUPixelX = 0;// berechnen
+			int sdCPixelX = 0;
+			int sdAPixelx = 0;
+			int sdUPixelY = 0;// berechnen
+			int sdCPixelY = 0;
+			int sdAPixelY = 0;
+
+			if (newScaleX < 1) {
+				sdUPixelX = input.getWidth() / (input.getWidth() * newScaleX);
+			}
+			if (newScaleY < 1) {
+				sdUPixelY = input.getHeight() / (input.getHeight() * newScaleY);
+			}
+
+			for (int i = 0; i < input.getWidth(); i++) { // breite
+				for (int j = 0; j < input.getHeight(); j++) { // höhe
+					Pixel p = input.getPixel(i, j);
+					System.out.println("Work X: " + i + " Y: " + j);
+					if (newSX < 1) { // verkleinerung breite
+						if (sdCPixelX < sdUPixelX) {
+							sdCPixelX++;
+						} else {
+							output.setBasicPixel(sdAPixelx, sdAPixelY, this.makeRGB(p.getRed(), p.getGreen(), p.getBlue()));
+							sdCPixelX = 0;
+						}
+					} else { // vergrößerung breite
+						for (int k = 0; k < newSX; k++) {
+							output.setBasicPixel(i + k, j, this.makeRGB(p.getRed(), p.getGreen(), p.getBlue()));
+						}
+					}
+					if (newSY < 1) {// verkleinerun höhe
+						if (sdCPixelY < sdUPixelY) {
+							sdCPixelY++;
+						} else {
+							output.setBasicPixel(sdAPixelx, sdAPixelY, this.makeRGB(p.getRed(), p.getGreen(), p.getBlue()));
+							sdCPixelY = 0;
+						}
+					} else {// vergrößerung höhe
+						for (int k = 0; k < newSY; k++) {
+							output.setBasicPixel(i, j + k, this.makeRGB(p.getRed(), p.getGreen(), p.getBlue()));
+						}
+					}
 				}
-
 			}
 			// Zeige das Bild zur Kontrolle an.
 			input.hide();
 			output.show();
-
 		}
-
 		return output;
 	}
 
@@ -86,7 +119,6 @@ public class ImageScaler {
 	 * Loesung der Aufgabe 38 / Blatt 10 / Wintersemester 2012/2013.
 	 */
 	public void run() {
-
 		Picture output;
 
 		String directory = new File("").getAbsolutePath() + "\\"; // Hier muss ein gueltiger Verzeichnisname
@@ -108,7 +140,6 @@ public class ImageScaler {
 	}
 
 	public static void main(String[] args) {
-
 		ImageScaler is = new ImageScaler();
 		is.run();
 
