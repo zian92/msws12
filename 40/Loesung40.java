@@ -1,5 +1,5 @@
 /**
- * Uebungsgruppe G6E (Namen der Teilnehmer)
+ * Uebungsgruppe G6E (Stadler, Niehaus, Pöll)
  * 
  */
 

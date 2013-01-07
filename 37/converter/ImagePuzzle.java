@@ -4,9 +4,8 @@ import java.io.IOException;
 import org.mediacomputation.givenclasses.FileChooser;
 import org.mediacomputation.givenclasses.Picture;
 import org.mediacomputation.givenclasses.Pixel;
-
 /**
- * Uebungsgruppe G6E (Namen der Teilnehmer)
+ * Uebungsgruppe G6E (Stadler, Niehaus, Pöll)
  * 
  */
 
@@ -130,7 +129,7 @@ public class ImagePuzzle {
 
 		ImagePuzzle ip = new ImagePuzzle();
 		// Schreibe das auszugebende Bild in eine Datei.
-		// ip.solveBlackPuzzle(); // Loese Aufgabe 37(a).
+		 ip.solveBlackPuzzle(); // Loese Aufgabe 37(a).
 		ip.solveGrassPuzzle(); // Loese Aufgabe 37(b).
 		// System.exit(0);
 	}
