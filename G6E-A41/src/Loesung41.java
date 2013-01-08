@@ -1,3 +1,5 @@
+import de.js.GregKal.BerechneFreitag13;
+
 /**
  * Uebungsgruppe G6E (Stadler, Niehaus, Pöll)
  * 
@@ -9,10 +11,9 @@
  * @version 1.0
  */
 public class Loesung41 {
-	
- static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+	public static void main(String[] args) {
+		BerechneFreitag13 bf13 = new BerechneFreitag13();
+		bf13.run();
 	}
-
 }
