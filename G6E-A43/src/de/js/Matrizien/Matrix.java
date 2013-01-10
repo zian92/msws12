@@ -8,5 +8,8 @@ public class Matrix {
 		this.m = m;
 		this.n = n;
 	}
-
+	
+	public Matrix(long [][] eingabe, int m, int n){
+	}
 }
+
