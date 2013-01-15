@@ -1,6 +1,13 @@
-package henner;
+package de.henner.Zooverwaltungssystem;
+
+
 
 import java.util.Vector;
+
+import de.henner.Zooverwaltungssystem.Habitate.Aquarium;
+import de.henner.Zooverwaltungssystem.Habitate.Cage;
+import de.henner.Zooverwaltungssystem.Habitate.Habitat;
+import de.henner.Zooverwaltungssystem.Tiere.Animal;
 
 public class Zoo {
 	/**

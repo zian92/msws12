@@ -1,4 +1,4 @@
-package henner;
+package de.henner.Zooverwaltungssystem;
 
 public class ZooMonitor {
 	/**

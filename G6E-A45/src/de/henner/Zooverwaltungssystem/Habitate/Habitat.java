@@ -1,4 +1,6 @@
-package henner;
+package de.henner.Zooverwaltungssystem.Habitate;
+
+import de.henner.Zooverwaltungssystem.ZooKeeper;
 
 public abstract class Habitat {
 	/**
