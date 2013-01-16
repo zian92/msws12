@@ -3,18 +3,23 @@ package de.henner.Zooverwaltungssystem;
 public class ZooMonitor {
 	/**
 	 * Die eindeutige ID für die Tiere. Wächst mit jedem Aufruf von makeNewAnimal.
+	 * @uml.property  name="animalID"
 	 */
 	private int animalID;
 	/**
 	 * Die eindeutige ID für die Habitate. Wächst mit jedem Aufruf von makeNewCage und makeNewAquarium.
+	 * @uml.property  name="habitatID"
 	 */
 	private int habitatID;
 	/**
 	 * Die eindeutige ID für die Tierpfleger. Wächst mit jedem Aufruf von makeNewZooKeeper.
+	 * @uml.property  name="zooKeeperID"
 	 */
 	private int zooKeeperID;
 	/**
 	 * Der Zoo den dieses Monitorobjekt überwacht.
+	 * @uml.property  name="monitoredZoo"
+	 * @uml.associationEnd  multiplicity="(1 1)"
 	 */
 	private Zoo monitoredZoo;
 	

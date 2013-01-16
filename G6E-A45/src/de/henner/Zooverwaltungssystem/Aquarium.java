@@ -1,10 +1,10 @@
-package de.henner.Zooverwaltungssystem.Habitate;
+package de.henner.Zooverwaltungssystem;
 
-import de.henner.Zooverwaltungssystem.ZooKeeper;
-
+@SuppressWarnings("unused")
 public class Aquarium extends Habitat{
 	/**
 	 * Die Tiefe des Aquariums in Metern.
+	 * @uml.property  name="depth"
 	 */
 	private int depth;
 	

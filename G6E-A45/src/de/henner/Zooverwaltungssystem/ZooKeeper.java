@@ -1,22 +1,27 @@
 package de.henner.Zooverwaltungssystem;
 
 
+@SuppressWarnings("unused")
 public class ZooKeeper {
 	
 	/**
 	 * Die eindeutige ID dieses Pflegers
+	 * @uml.property  name="iD"
 	 */
 	private final int ID;
 	/**
 	 * Der Vorname des Pflegers.
+	 * @uml.property  name="firstName"
 	 */
 	private String firstName;
 	/**
 	 * Der Nachname des Pflegers.
+	 * @uml.property  name="surname"
 	 */
 	private String surname;
 	/**
 	 * Die Adresse des Pflegers.
+	 * @uml.property  name="address"
 	 */
 	private String address;
 	
