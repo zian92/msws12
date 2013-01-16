@@ -1,4 +1,6 @@
-package de.henner.Zooverwaltungssystem;
+package de.henner.Zooverwaltungssystem.Habitat;
+
+import de.henner.Zooverwaltungssystem.ZooKeeper;
 
 
 public class Cage extends Habitat {

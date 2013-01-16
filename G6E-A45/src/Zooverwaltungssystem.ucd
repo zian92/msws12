@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="Zooverwaltungssystem" size="1339,1577" id="de.henner.Zooverwaltungssystem" metadata="uml2-1.0" initialized="true" scrolledX="-5" scrolledY="-5" tag="10" key="32303037303533312D3130204736452D413435">
-  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.2/@sourceConnections.0" name="Zoo" location="563,271" size="589,139" id="de.henner.Zooverwaltungssystem/Zoo" runTimeClassModel="makeNewAnimal(ILjava.lang.String;IIII),makeNewAquarium(IIIIILde.henner.Zooverwaltungssystem.ZooKeeper;),Zoo(),makeNewZooKeeper(ILjava.lang.String;Ljava.lang.String;Ljava.lang.String;),makeNewCage(IIIILde.henner.Zooverwaltungssystem.ZooKeeper;)">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.2/@sourceConnections.0" name="Zoo" location="1043,201" size="589,139" id="de.henner.Zooverwaltungssystem/Zoo" runTimeClassModel="makeNewAnimal(ILjava.lang.String;IIII),makeNewAquarium(IIIIILde.henner.Zooverwaltungssystem.ZooKeeper;),Zoo(),makeNewZooKeeper(ILjava.lang.String;Ljava.lang.String;Ljava.lang.String;),makeNewCage(IIIILde.henner.Zooverwaltungssystem.ZooKeeper;)">
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <children xsi:type="editmodel:CompartmentEditModel" size="566,90">
       <children xsi:type="editmodel:MethodEditModel" name="Zoo" id="de.henner.Zooverwaltungssystem/Zoo#Zoo()"/>
@@ -10,32 +10,32 @@
       <children xsi:type="editmodel:MethodEditModel" name="makeNewZooKeeper" id="de.henner.Zooverwaltungssystem/Zoo#makeNewZooKeeper(ILjava.lang.String;Ljava.lang.String;Ljava.lang.String;)"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
-    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="de.henner.Zooverwaltungssystem/Habitat@habitats+de.henner.Zooverwaltungssystem/Zoo@" source="//@children.0" target="//@children.6" targetEnd="//@children.0/@sourceConnections.0/@children.2" label="//@children.0/@sourceConnections.0/@children.0" sourceEnd="//@children.0/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="de.henner.Zooverwaltungssystem.Habitat/Habitat@habitats+de.henner.Zooverwaltungssystem/Zoo@" source="//@children.0" target="//@children.6" targetEnd="//@children.0/@sourceConnections.0/@children.2" label="//@children.0/@sourceConnections.0/@children.0" sourceEnd="//@children.0/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
       <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
-      <children xsi:type="editmodel:AssociationEndEditModel" location="10,139" id="de.henner.Zooverwaltungssystem/Habitat@habitats+de.henner.Zooverwaltungssystem/Zoo@|de.henner.Zooverwaltungssystem/Zoo#" attachSource="true" roleLabel="//@children.0/@sourceConnections.0/@children.1/@children.0">
-        <children xsi:type="editmodel:LabelEditModel" location="566,417" size="0,14" anchorKind="FirstPart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,139" id="de.henner.Zooverwaltungssystem.Habitat/Habitat@habitats+de.henner.Zooverwaltungssystem/Zoo@|de.henner.Zooverwaltungssystem/Zoo#" attachSource="true" roleLabel="//@children.0/@sourceConnections.0/@children.1/@children.0">
+        <children xsi:type="editmodel:LabelEditModel" location="1046,347" size="0,14" anchorKind="FirstPart"/>
       </children>
-      <children xsi:type="editmodel:AssociationEndEditModel" name="habitats" location="467,10" id="de.henner.Zooverwaltungssystem/Habitat@habitats+de.henner.Zooverwaltungssystem/Zoo@|de.henner.Zooverwaltungssystem/Habitat#habitats" multiplicityLabel="//@children.0/@sourceConnections.0/@children.2/@children.1" roleLabel="//@children.0/@sourceConnections.0/@children.2/@children.0" navigable="true">
-        <children xsi:type="editmodel:LabelEditModel" name=" - habitats" location="553,632" size="48,14" anchorKind="LastPart"/>
-        <children xsi:type="editmodel:LabelEditModel" name="*" location="553,604" size="4,14" anchorKind="LastPart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="habitats" location="467,10" id="de.henner.Zooverwaltungssystem.Habitat/Habitat@habitats+de.henner.Zooverwaltungssystem/Zoo@|de.henner.Zooverwaltungssystem.Habitat/Habitat#habitats" multiplicityLabel="//@children.0/@sourceConnections.0/@children.2/@children.1" roleLabel="//@children.0/@sourceConnections.0/@children.2/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - habitats" location="974,371" size="48,14" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="*" location="974,343" size="4,14" anchorKind="LastPart"/>
       </children>
     </sourceConnections>
     <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="de.henner.Zooverwaltungssystem/ZooKeeper@zooKeepers+de.henner.Zooverwaltungssystem/Zoo@" source="//@children.0" target="//@children.3" targetEnd="//@children.0/@sourceConnections.1/@children.2" label="//@children.0/@sourceConnections.1/@children.0" sourceEnd="//@children.0/@sourceConnections.1/@children.1" connectionRouterKind="Manhattan">
       <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
-      <children xsi:type="editmodel:AssociationEndEditModel" location="302,139" id="de.henner.Zooverwaltungssystem/ZooKeeper@zooKeepers+de.henner.Zooverwaltungssystem/Zoo@|de.henner.Zooverwaltungssystem/Zoo#" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="379,139" id="de.henner.Zooverwaltungssystem/ZooKeeper@zooKeepers+de.henner.Zooverwaltungssystem/Zoo@|de.henner.Zooverwaltungssystem/Zoo#" attachSource="true"/>
       <children xsi:type="editmodel:AssociationEndEditModel" name="zooKeepers" location="201,0" id="de.henner.Zooverwaltungssystem/ZooKeeper@zooKeepers+de.henner.Zooverwaltungssystem/Zoo@|de.henner.Zooverwaltungssystem/ZooKeeper#zooKeepers" multiplicityLabel="//@children.0/@sourceConnections.1/@children.2/@children.1" roleLabel="//@children.0/@sourceConnections.1/@children.2/@children.0" navigable="true">
-        <children xsi:type="editmodel:LabelEditModel" name=" - zooKeepers" location="872,594" size="69,14" anchorKind="LastPart"/>
-        <children xsi:type="editmodel:LabelEditModel" name="*" location="854,594" size="4,14" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name=" - zooKeepers" location="1429,414" size="69,14" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="*" location="1411,414" size="4,14" anchorKind="LastPart"/>
       </children>
     </sourceConnections>
     <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="de.henner.Zooverwaltungssystem/Zoo@monitoredZoo+de.henner.Zooverwaltungssystem/ZooMonitor@" source="//@children.0" target="//@children.1" targetEnd="//@children.0/@sourceConnections.2/@children.2" label="//@children.0/@sourceConnections.2/@children.0" sourceEnd="//@children.0/@sourceConnections.2/@children.1" connectionRouterKind="Manhattan">
       <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
-      <children xsi:type="editmodel:AssociationEndEditModel" name="monitoredZoo" location="217,0" id="de.henner.Zooverwaltungssystem/Zoo@monitoredZoo+de.henner.Zooverwaltungssystem/ZooMonitor@|de.henner.Zooverwaltungssystem/Zoo#monitoredZoo" attachSource="true" multiplicityLabel="//@children.0/@sourceConnections.2/@children.1/@children.1" roleLabel="//@children.0/@sourceConnections.2/@children.1/@children.0" navigable="true">
-        <children xsi:type="editmodel:LabelEditModel" name=" - monitoredZoo" location="697,250" size="76,14" anchorKind="FirstPart"/>
-        <children xsi:type="editmodel:LabelEditModel" name="1" location="787,250" size="6,14" anchorKind="FirstPart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="monitoredZoo" location="10,0" id="de.henner.Zooverwaltungssystem/Zoo@monitoredZoo+de.henner.Zooverwaltungssystem/ZooMonitor@|de.henner.Zooverwaltungssystem/Zoo#monitoredZoo" attachSource="true" multiplicityLabel="//@children.0/@sourceConnections.2/@children.1/@children.1" roleLabel="//@children.0/@sourceConnections.2/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - monitoredZoo" location="1060,180" size="76,14" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="1040,180" size="6,14" anchorKind="FirstPart"/>
       </children>
-      <children xsi:type="editmodel:AssociationEndEditModel" location="328,193" id="de.henner.Zooverwaltungssystem/Zoo@monitoredZoo+de.henner.Zooverwaltungssystem/ZooMonitor@|de.henner.Zooverwaltungssystem/ZooMonitor#" roleLabel="//@children.0/@sourceConnections.2/@children.2/@children.0">
-        <children xsi:type="editmodel:LabelEditModel" location="781,200" size="0,14" anchorKind="LastPart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="547,183" id="de.henner.Zooverwaltungssystem/Zoo@monitoredZoo+de.henner.Zooverwaltungssystem/ZooMonitor@|de.henner.Zooverwaltungssystem/ZooMonitor#" roleLabel="//@children.0/@sourceConnections.2/@children.2/@children.0">
+        <children xsi:type="editmodel:LabelEditModel" location="1014,162" size="0,14" anchorKind="LastPart"/>
       </children>
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPrivateMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
@@ -46,7 +46,7 @@
       <children xsi:type="editmodel:AttributeEditModel" name="habitatID" id="de.henner.Zooverwaltungssystem/ZooMonitor#habitatID"/>
       <children xsi:type="editmodel:AttributeEditModel" name="zooKeeperID" id="de.henner.Zooverwaltungssystem/ZooMonitor#zooKeeperID"/>
     </children>
-    <children xsi:type="editmodel:CompartmentEditModel" size="132,90">
+    <children xsi:type="editmodel:CompartmentEditModel" size="524,90">
       <children xsi:type="editmodel:MethodEditModel" name="ZooMonitor" id="de.henner.Zooverwaltungssystem/ZooMonitor#ZooMonitor()"/>
       <children xsi:type="editmodel:MethodEditModel" name="makeNewAnimal" id="de.henner.Zooverwaltungssystem/ZooMonitor#makeNewAnimal(Ljava.lang.String;IIII)"/>
       <children xsi:type="editmodel:MethodEditModel" name="makeNewAquarium" id="de.henner.Zooverwaltungssystem/ZooMonitor#makeNewAquarium(IIIILde.henner.Zooverwaltungssystem.ZooKeeper;)"/>
@@ -56,17 +56,17 @@
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPrivateMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" name="Animal" size="453,602" id="de.henner.Zooverwaltungssystem/Animal" runTimeClassModel="sex,de.henner.Zooverwaltungssystem.Animal.Food,Animal(ILjava.lang.String;IIII),de.henner.Zooverwaltungssystem.Animal.Race,food,feedingTime,name,de.henner.Zooverwaltungssystem.Animal.Sex,iD,race">
+  <children xsi:type="editmodel:ClassEditModel" name="Animal" size="453,602" id="de.henner.Zooverwaltungssystem.Tiere/Animal" runTimeClassModel="sex,de.henner.Zooverwaltungssystem.Animal.Food,Animal(ILjava.lang.String;IIII),de.henner.Zooverwaltungssystem.Animal.Race,food,feedingTime,name,de.henner.Zooverwaltungssystem.Animal.Sex,iD,race">
     <children xsi:type="editmodel:CompartmentEditModel" size="94,108">
-      <children xsi:type="editmodel:AttributeEditModel" name="feedingTime" id="de.henner.Zooverwaltungssystem/Animal#feedingTime"/>
-      <children xsi:type="editmodel:AttributeEditModel" name="food" id="de.henner.Zooverwaltungssystem/Animal#food"/>
-      <children xsi:type="editmodel:AttributeEditModel" name="iD" id="de.henner.Zooverwaltungssystem/Animal#iD"/>
-      <children xsi:type="editmodel:AttributeEditModel" name="name" id="de.henner.Zooverwaltungssystem/Animal#name"/>
-      <children xsi:type="editmodel:AttributeEditModel" name="race" id="de.henner.Zooverwaltungssystem/Animal#race"/>
-      <children xsi:type="editmodel:AttributeEditModel" name="sex" id="de.henner.Zooverwaltungssystem/Animal#sex"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="feedingTime" id="de.henner.Zooverwaltungssystem.Tiere/Animal#feedingTime"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="food" id="de.henner.Zooverwaltungssystem.Tiere/Animal#food"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="iD" id="de.henner.Zooverwaltungssystem.Tiere/Animal#iD"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="name" id="de.henner.Zooverwaltungssystem.Tiere/Animal#name"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="race" id="de.henner.Zooverwaltungssystem.Tiere/Animal#race"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="sex" id="de.henner.Zooverwaltungssystem.Tiere/Animal#sex"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="430,18">
-      <children xsi:type="editmodel:MethodEditModel" name="Animal" id="de.henner.Zooverwaltungssystem/Animal#Animal(ILjava.lang.String;IIII)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Animal" id="de.henner.Zooverwaltungssystem.Tiere/Animal#Animal(ILjava.lang.String;IIII)"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="136,417">
       <children xsi:type="editmodel:EnumerationEditModel" name="Food" size="122,125" id="de.henner.Zooverwaltungssystem/Animal$Food" runTimeClassModel="FOOD_COOKIES%,FOOD_KRILL%,FOOD_MEAT%,FOOD_BANANA%">
@@ -78,7 +78,7 @@
         </children>
         <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPrivateMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
       </children>
-      <children xsi:type="editmodel:EnumerationEditModel" name="Race" size="136,197" id="de.henner.Zooverwaltungssystem/Animal$Race" runTimeClassModel="RACE_LION%,RACE_GORILLA%,RACE_SLOTH%,RACE_SHARK%,RACE_CHIMP%,RACE_TIGER%,RACE_GUINEA_PIG%,RACE_GOLDFISH%">
+      <children xsi:type="editmodel:EnumerationEditModel" name="Race" size="136,197" id="de.henner.Zooverwaltungssystem/Animal$Race" runTimeClassModel="RACE_LION%,RACE_GORILLA%,RACE_SLOTH%,RACE_SHARK%,RACE_CHIMP%,RACE_GUINEA_PIG%,RACE_TIGER%,RACE_GOLDFISH%">
         <children xsi:type="editmodel:CompartmentEditModel" size="113,144">
           <children xsi:type="editmodel:EnumerationLiteralEditModel" name="RACE_SLOTH" id="de.henner.Zooverwaltungssystem/Animal$Race#RACE_SLOTH%"/>
           <children xsi:type="editmodel:EnumerationLiteralEditModel" name="RACE_SHARK" id="de.henner.Zooverwaltungssystem/Animal$Race#RACE_SHARK%"/>
@@ -99,17 +99,17 @@
         <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPrivateMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
       </children>
     </children>
-    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="de.henner.Zooverwaltungssystem/Animal@animals+de.henner.Zooverwaltungssystem/Zoo@" source="//@children.2" target="//@children.0" targetEnd="//@children.2/@sourceConnections.0/@children.2" label="//@children.2/@sourceConnections.0/@children.0" sourceEnd="//@children.2/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="de.henner.Zooverwaltungssystem.Tiere/Animal@animals+de.henner.Zooverwaltungssystem/Zoo@" source="//@children.2" target="//@children.0" targetEnd="//@children.2/@sourceConnections.0/@children.2" label="//@children.2/@sourceConnections.0/@children.0" sourceEnd="//@children.2/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
       <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
-      <children xsi:type="editmodel:AssociationEndEditModel" name="animals" location="453,340" id="de.henner.Zooverwaltungssystem/Animal@animals+de.henner.Zooverwaltungssystem/Zoo@|de.henner.Zooverwaltungssystem/Animal#animals" attachSource="true" multiplicityLabel="//@children.2/@sourceConnections.0/@children.1/@children.1" roleLabel="//@children.2/@sourceConnections.0/@children.1/@children.0" navigable="true">
-        <children xsi:type="editmodel:LabelEditModel" name=" - animals" location="460,319" size="46,14" anchorKind="FirstPart"/>
-        <children xsi:type="editmodel:LabelEditModel" name="*" location="460,347" size="4,14" anchorKind="FirstPart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="animals" location="453,270" id="de.henner.Zooverwaltungssystem.Tiere/Animal@animals+de.henner.Zooverwaltungssystem/Zoo@|de.henner.Zooverwaltungssystem.Tiere/Animal#animals" attachSource="true" multiplicityLabel="//@children.2/@sourceConnections.0/@children.1/@children.1" roleLabel="//@children.2/@sourceConnections.0/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - animals" location="460,249" size="46,14" anchorKind="FirstPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="*" location="460,277" size="4,14" anchorKind="FirstPart"/>
       </children>
-      <children xsi:type="editmodel:AssociationEndEditModel" location="0,69" id="de.henner.Zooverwaltungssystem/Animal@animals+de.henner.Zooverwaltungssystem/Zoo@|de.henner.Zooverwaltungssystem/Zoo#"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,69" id="de.henner.Zooverwaltungssystem.Tiere/Animal@animals+de.henner.Zooverwaltungssystem/Zoo@|de.henner.Zooverwaltungssystem/Zoo#"/>
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPrivateMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.0/@sourceConnections.1 //@children.6/@sourceConnections.0" name="ZooKeeper" location="664,615" size="404,139" id="de.henner.Zooverwaltungssystem/ZooKeeper" runTimeClassModel="ZooKeeper(ILjava.lang.String;Ljava.lang.String;Ljava.lang.String;),address,surname,firstName,iD">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.0/@sourceConnections.1 //@children.6/@sourceConnections.0" name="ZooKeeper" location="1221,435" size="404,139" id="de.henner.Zooverwaltungssystem/ZooKeeper" runTimeClassModel="ZooKeeper(ILjava.lang.String;Ljava.lang.String;Ljava.lang.String;),address,surname,firstName,iD">
     <children xsi:type="editmodel:CompartmentEditModel" size="99,72">
       <children xsi:type="editmodel:AttributeEditModel" name="address" id="de.henner.Zooverwaltungssystem/ZooKeeper#address"/>
       <children xsi:type="editmodel:AttributeEditModel" name="firstName" id="de.henner.Zooverwaltungssystem/ZooKeeper#firstName"/>
@@ -122,49 +122,49 @@
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPrivateMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" name="Aquarium" location="528,780" size="540,85" id="de.henner.Zooverwaltungssystem/Aquarium" runTimeClassModel="Aquarium(IIIIILde.henner.Zooverwaltungssystem.ZooKeeper;),depth">
+  <children xsi:type="editmodel:ClassEditModel" name="Aquarium" location="897,601" size="540,85" id="de.henner.Zooverwaltungssystem.Habitat/Aquarium" runTimeClassModel="Aquarium(IIIIILde.henner.Zooverwaltungssystem.ZooKeeper;),depth">
     <children xsi:type="editmodel:CompartmentEditModel" size="63,18">
-      <children xsi:type="editmodel:AttributeEditModel" name="depth" id="de.henner.Zooverwaltungssystem/Aquarium#depth"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="depth" id="de.henner.Zooverwaltungssystem.Habitat/Aquarium#depth"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="517,18">
-      <children xsi:type="editmodel:MethodEditModel" name="Aquarium" id="de.henner.Zooverwaltungssystem/Aquarium#Aquarium(IIIIILde.henner.Zooverwaltungssystem.ZooKeeper;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Aquarium" id="de.henner.Zooverwaltungssystem.Habitat/Aquarium#Aquarium(IIIIILde.henner.Zooverwaltungssystem.ZooKeeper;)"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
-    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.5/@sourceConnections.0" autoLocated="true" id="de.henner.Zooverwaltungssystem/Habitat&lt;-de.henner.Zooverwaltungssystem/Aquarium" source="//@children.4" target="//@children.6" targetEnd="//@children.4/@sourceConnections.0/@children.1" sourceEnd="//@children.4/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" targetConnections="//@children.5/@sourceConnections.0" autoLocated="true" id="de.henner.Zooverwaltungssystem.Habitat/Habitat&lt;-de.henner.Zooverwaltungssystem.Habitat/Aquarium" source="//@children.4" target="//@children.6" targetEnd="//@children.4/@sourceConnections.0/@children.1" sourceEnd="//@children.4/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
       <children xsi:type="editmodel:AssociationEndEditModel" location="269,0" anchorKind="FixedAtEdge" attachSource="true"/>
       <children xsi:type="editmodel:AssociationEndEditModel" location="230,139" anchorKind="FixedAtEdge"/>
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPrivateMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" name="Cage" location="105,885" size="459,67" id="de.henner.Zooverwaltungssystem/Cage" runTimeClassModel="Cage(IIIILde.henner.Zooverwaltungssystem.ZooKeeper;)">
+  <children xsi:type="editmodel:ClassEditModel" name="Cage" location="411,610" size="459,67" id="de.henner.Zooverwaltungssystem.Habitat/Cage" runTimeClassModel="Cage(IIIILde.henner.Zooverwaltungssystem.ZooKeeper;)">
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
-    <children xsi:type="editmodel:CompartmentEditModel" size="55,18">
-      <children xsi:type="editmodel:MethodEditModel" name="Cage" id="de.henner.Zooverwaltungssystem/Cage#Cage(IIIILde.henner.Zooverwaltungssystem.ZooKeeper;)"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="436,18">
+      <children xsi:type="editmodel:MethodEditModel" name="Cage" id="de.henner.Zooverwaltungssystem.Habitat/Cage#Cage(IIIILde.henner.Zooverwaltungssystem.ZooKeeper;)"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
-    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="de.henner.Zooverwaltungssystem/Habitat&lt;-de.henner.Zooverwaltungssystem/Cage" source="//@children.5" target="//@children.4/@sourceConnections.0" targetEnd="//@children.5/@sourceConnections.0/@children.1" sourceEnd="//@children.5/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="de.henner.Zooverwaltungssystem.Habitat/Habitat&lt;-de.henner.Zooverwaltungssystem.Habitat/Cage" source="//@children.5" target="//@children.4/@sourceConnections.0" targetEnd="//@children.5/@sourceConnections.0/@children.1" sourceEnd="//@children.5/@sourceConnections.0/@children.0" connectionRouterKind="GeneralizationManhattan">
       <children xsi:type="editmodel:AssociationEndEditModel" location="229,0" anchorKind="FixedAtEdge" attachSource="true"/>
       <children xsi:type="editmodel:AssociationEndEditModel"/>
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPrivateMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
   </children>
-  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.0/@sourceConnections.0 //@children.4/@sourceConnections.0" name="Habitat" location="79,615" size="467,139" id="de.henner.Zooverwaltungssystem/Habitat" runTimeClassModel="Habitat(IIIILde.henner.Zooverwaltungssystem.ZooKeeper;),width,length,numberOfDoors,iD">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.0/@sourceConnections.0 //@children.4/@sourceConnections.0" name="Habitat" location="500,354" size="467,139" id="de.henner.Zooverwaltungssystem.Habitat/Habitat" runTimeClassModel="Habitat(IIIILde.henner.Zooverwaltungssystem.ZooKeeper;),width,length,numberOfDoors,iD">
     <children xsi:type="editmodel:CompartmentEditModel" size="113,72">
-      <children xsi:type="editmodel:AttributeEditModel" name="iD" id="de.henner.Zooverwaltungssystem/Habitat#iD"/>
-      <children xsi:type="editmodel:AttributeEditModel" name="length" id="de.henner.Zooverwaltungssystem/Habitat#length"/>
-      <children xsi:type="editmodel:AttributeEditModel" name="numberOfDoors" id="de.henner.Zooverwaltungssystem/Habitat#numberOfDoors"/>
-      <children xsi:type="editmodel:AttributeEditModel" name="width" id="de.henner.Zooverwaltungssystem/Habitat#width"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="iD" id="de.henner.Zooverwaltungssystem.Habitat/Habitat#iD"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="length" id="de.henner.Zooverwaltungssystem.Habitat/Habitat#length"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="numberOfDoors" id="de.henner.Zooverwaltungssystem.Habitat/Habitat#numberOfDoors"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="width" id="de.henner.Zooverwaltungssystem.Habitat/Habitat#width"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="444,18">
-      <children xsi:type="editmodel:MethodEditModel" name="Habitat" id="de.henner.Zooverwaltungssystem/Habitat#Habitat(IIIILde.henner.Zooverwaltungssystem.ZooKeeper;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Habitat" id="de.henner.Zooverwaltungssystem.Habitat/Habitat#Habitat(IIIILde.henner.Zooverwaltungssystem.ZooKeeper;)"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
-    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="de.henner.Zooverwaltungssystem/ZooKeeper@keeper+de.henner.Zooverwaltungssystem/Habitat@" source="//@children.6" target="//@children.3" targetEnd="//@children.6/@sourceConnections.0/@children.2" label="//@children.6/@sourceConnections.0/@children.0" sourceEnd="//@children.6/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" id="de.henner.Zooverwaltungssystem/ZooKeeper@keeper+de.henner.Zooverwaltungssystem.Habitat/Habitat@" source="//@children.6" target="//@children.3" targetEnd="//@children.6/@sourceConnections.0/@children.2" label="//@children.6/@sourceConnections.0/@children.0" sourceEnd="//@children.6/@sourceConnections.0/@children.1" connectionRouterKind="Manhattan">
       <children xsi:type="editmodel:WireLabelEditModel" size="0,14" anchorKind="MiddlePart"/>
-      <children xsi:type="editmodel:AssociationEndEditModel" location="467,69" id="de.henner.Zooverwaltungssystem/ZooKeeper@keeper+de.henner.Zooverwaltungssystem/Habitat@|de.henner.Zooverwaltungssystem/Habitat#" attachSource="true"/>
-      <children xsi:type="editmodel:AssociationEndEditModel" name="keeper" location="0,69" id="de.henner.Zooverwaltungssystem/ZooKeeper@keeper+de.henner.Zooverwaltungssystem/Habitat@|de.henner.Zooverwaltungssystem/ZooKeeper#keeper" multiplicityLabel="//@children.6/@sourceConnections.0/@children.2/@children.1" roleLabel="//@children.6/@sourceConnections.0/@children.2/@children.0" navigable="true">
-        <children xsi:type="editmodel:LabelEditModel" name=" - keeper" location="614,663" size="43,14" anchorKind="LastPart"/>
-        <children xsi:type="editmodel:LabelEditModel" name="1" location="651,691" size="6,14" anchorKind="LastPart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="467,109" id="de.henner.Zooverwaltungssystem/ZooKeeper@keeper+de.henner.Zooverwaltungssystem.Habitat/Habitat@|de.henner.Zooverwaltungssystem.Habitat/Habitat#" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="keeper" location="0,28" id="de.henner.Zooverwaltungssystem/ZooKeeper@keeper+de.henner.Zooverwaltungssystem.Habitat/Habitat@|de.henner.Zooverwaltungssystem/ZooKeeper#keeper" multiplicityLabel="//@children.6/@sourceConnections.0/@children.2/@children.1" roleLabel="//@children.6/@sourceConnections.0/@children.2/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name=" - keeper" location="1171,442" size="43,14" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="1" location="1208,470" size="6,14" anchorKind="LastPart"/>
       </children>
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" showMethodsParameterTypes="true" showMethodsReturnType="true" showMethodsParameterNames="true" showMethodsParameterKinds="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPrivateMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>

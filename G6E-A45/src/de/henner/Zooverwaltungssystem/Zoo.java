@@ -4,17 +4,22 @@ package de.henner.Zooverwaltungssystem;
 
 import java.util.Vector;
 
+import de.henner.Zooverwaltungssystem.Habitat.Aquarium;
+import de.henner.Zooverwaltungssystem.Habitat.Cage;
+import de.henner.Zooverwaltungssystem.Habitat.Habitat;
+import de.henner.Zooverwaltungssystem.Tiere.Animal;
+
 public class Zoo {
 	/**
 	 * Die Habitate dieses Zoos.
 	 * @uml.property   name="habitats"
-	 * @uml.associationEnd   multiplicity="(0 -1)" elementType="de.henner.Zooverwaltungssystem.Habitat"
+	 * @uml.associationEnd   multiplicity="(0 -1)" elementType="de.henner.Zooverwaltungssystem.Habitat.Habitat"
 	 */
 	private Vector<Habitat> habitats;
 	/**
 	 * Die Tiere dieses Zoos.
 	 * @uml.property   name="animals"
-	 * @uml.associationEnd   multiplicity="(0 -1)" elementType="de.henner.Zooverwaltungssystem.Animal"
+	 * @uml.associationEnd   multiplicity="(0 -1)" elementType="de.henner.Zooverwaltungssystem.Tiere.Animal"
 	 */
 	private Vector<Animal> animals;
 	/**

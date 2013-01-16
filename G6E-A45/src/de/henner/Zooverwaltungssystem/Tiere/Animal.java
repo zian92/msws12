@@ -1,4 +1,4 @@
-package de.henner.Zooverwaltungssystem;
+package de.henner.Zooverwaltungssystem.Tiere;
 
 
 @SuppressWarnings("unused")
