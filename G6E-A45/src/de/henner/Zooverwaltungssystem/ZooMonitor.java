@@ -1,5 +1,9 @@
 package de.henner.Zooverwaltungssystem;
 
+import de.henner.Zooverwaltungssystem.Tiere.Animal.Food;
+import de.henner.Zooverwaltungssystem.Tiere.Animal.Race;
+import de.henner.Zooverwaltungssystem.Tiere.Animal.Sex;
+
 public class ZooMonitor {
 	/**
 	 * Die eindeutige ID für die Tiere. Wächst mit jedem Aufruf von makeNewAnimal.
@@ -40,7 +44,7 @@ public class ZooMonitor {
 	 * @param food			die Nahrung
 	 * @param feedingTime	die Fütterungszeit <i>(Format: hhmm)</i>
 	 */
-	public void makeNewAnimal(String name, int race, int sex, int food, int feedingTime){
+	public void makeNewAnimal(String name, Race race, Sex sex, Food food, int feedingTime){
 		monitoredZoo.makeNewAnimal(animalID++, name, race, sex, food, feedingTime);
 	}
 	/**
@@ -72,6 +76,12 @@ public class ZooMonitor {
 	 */
 	public void makeNewZooKeeper(String name, String surname, String address){
 		monitoredZoo.makeNewZooKeeper(zooKeeperID++, name, surname, address);
+	}
+	public Zoo getMonitoredZoo() {
+		return monitoredZoo;
+	}
+	public void setMonitoredZoo(Zoo monitoredZoo) {
+		this.monitoredZoo = monitoredZoo;
 	}
 
 }

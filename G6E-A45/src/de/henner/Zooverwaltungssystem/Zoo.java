@@ -1,13 +1,15 @@
 package de.henner.Zooverwaltungssystem;
 
 
-
 import java.util.Vector;
 
 import de.henner.Zooverwaltungssystem.Habitat.Aquarium;
 import de.henner.Zooverwaltungssystem.Habitat.Cage;
 import de.henner.Zooverwaltungssystem.Habitat.Habitat;
 import de.henner.Zooverwaltungssystem.Tiere.Animal;
+import de.henner.Zooverwaltungssystem.Tiere.Animal.Food;
+import de.henner.Zooverwaltungssystem.Tiere.Animal.Race;
+import de.henner.Zooverwaltungssystem.Tiere.Animal.Sex;
 
 
 public class Zoo {
@@ -34,6 +36,9 @@ public class Zoo {
 	 * Erstellt ein Zooobjekt.
 	 */
 	public Zoo(){
+		habitats = new Vector<Habitat>();
+		animals = new Vector<Animal>();
+		zooKeepers = new Vector<ZooKeeper>();
 		
 	}
 	/**
@@ -45,7 +50,7 @@ public class Zoo {
 	 * @param food			die Nahrung
 	 * @param feedingTime	die Fütterungszeit <i>(Format: hhmm)</i>
 	 */
-	public void makeNewAnimal(int id, String name, int race, int sex, int food, int feedingTime){
+	public void makeNewAnimal(int id, String name, Race race, Sex sex, Food food, int feedingTime){
 		animals.add(new Animal(id, name, race, sex, food, feedingTime));
 	}
 	/**
@@ -80,6 +85,24 @@ public class Zoo {
 	 */
 	public void makeNewZooKeeper(int id, String name, String surname, String address){
 		zooKeepers.add(new ZooKeeper(id, name, surname, address));
+	}
+	public Vector<Habitat> getHabitats() {
+		return habitats;
+	}
+	public void setHabitats(Vector<Habitat> habitats) {
+		this.habitats = habitats;
+	}
+	public Vector<ZooKeeper> getZooKeepers() {
+		return zooKeepers;
+	}
+	public void setZooKeepers(Vector<ZooKeeper> zooKeepers) {
+		this.zooKeepers = zooKeepers;
+	}
+	public Vector<Animal> getAnimals() {
+		return animals;
+	}
+	public void setAnimals(Vector<Animal> animals) {
+		this.animals = animals;
 	}
 
 }

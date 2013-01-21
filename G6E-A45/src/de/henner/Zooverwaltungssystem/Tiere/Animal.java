@@ -23,11 +23,11 @@ public class Animal {
 		 * @uml.property  name="sEX_MALE"
 		 * @uml.associationEnd  
 		 */
-		SEX_MALE, /**
+		MALE, /**
 		 * @uml.property  name="sEX_FEMALE"
 		 * @uml.associationEnd  
 		 */
-		SEX_FEMALE
+		FEMALE
 	}
 
 	/**
@@ -38,35 +38,35 @@ public class Animal {
 		 * @uml.property  name="rACE_CHIMP"
 		 * @uml.associationEnd  
 		 */
-		RACE_CHIMP, /**
+		CHIMP, /**
 		 * @uml.property  name="rACE_GORILLA"
 		 * @uml.associationEnd  
 		 */
-		RACE_GORILLA, /**
+		GORILLA, /**
 		 * @uml.property  name="rACE_TIGER"
 		 * @uml.associationEnd  
 		 */
-		RACE_TIGER, /**
+		TIGER, /**
 		 * @uml.property  name="rACE_LION"
 		 * @uml.associationEnd  
 		 */
-		RACE_LION, /**
+		LION, /**
 		 * @uml.property  name="rACE_SLOTH"
 		 * @uml.associationEnd  
 		 */
-		RACE_SLOTH, /**
+		SLOTH, /**
 		 * @uml.property  name="rACE_GUINEA_PIG"
 		 * @uml.associationEnd  
 		 */
-		RACE_GUINEA_PIG, /**
+		GUINEA_PIG, /**
 		 * @uml.property  name="rACE_GOLDFISH"
 		 * @uml.associationEnd  
 		 */
-		RACE_GOLDFISH, /**
+		GOLDFISH, /**
 		 * @uml.property  name="rACE_SHARK"
 		 * @uml.associationEnd  
 		 */
-		RACE_SHARK
+		SHARK
 	}
 
 	/**
@@ -77,36 +77,36 @@ public class Animal {
 		 * @uml.property  name="fOOD_BANANA"
 		 * @uml.associationEnd  
 		 */
-		FOOD_BANANA, /**
+		BANANA, /**
 		 * @uml.property  name="fOOD_MEAT"
 		 * @uml.associationEnd  
 		 */
-		FOOD_MEAT, /**
+		MEAT, /**
 		 * @uml.property  name="fOOD_COOKIES"
 		 * @uml.associationEnd  
 		 */
-		FOOD_COOKIES, /**
+		COOKIES, /**
 		 * @uml.property  name="fOOD_KRILL"
 		 * @uml.associationEnd  
 		 */
-		FOOD_KRILL
+		KRILL
 	}
 
 	/**
 	 * Das  Geschlecht des Tieres.
 	 * @uml.property  name="sex"
 	 */
-	private int sex;
+	private Sex sex;
 	/**
 	 * Die Nahrung des Tieres.
 	 * @uml.property  name="food"
 	 */
-	private int food;
+	private Food food;
 	/**
 	 * Die Rasse des Tieres.
 	 * @uml.property  name="race"
 	 */
-	private int race;
+	private Race race;
 	/**
 	 * Die Fütterungszeit des Tieres im Format hhmm. So soll z.B. <code>feedingTime = 1230</code> bedeuten, dass ein Tier um 12:30 Uhr gefüttert wird.
 	 * @uml.property  name="feedingTime"
@@ -123,12 +123,56 @@ public class Animal {
 	 * @param food			Die Nahrung
 	 * @param feedingTime	Die Fütterungszeit <i>(Format: hhmm)</i>
 	 */
-	public Animal(int id, String name, int race, int sex, int food, int feedingTime) {
+	public Animal(int id, String name, Race race, Sex sex, Food food, int feedingTime) {
 		ID = id;
 		this.name = name;
 		this.race = race;
 		this.sex = sex;
 		this.food = food;
 		this.feedingTime = feedingTime;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Sex getSex() {
+		return sex;
+	}
+
+	public void setSex(Sex sex) {
+		this.sex = sex;
+	}
+
+	public Food getFood() {
+		return food;
+	}
+
+	public void setFood(Food food) {
+		this.food = food;
+	}
+
+	public Race getRace() {
+		return race;
+	}
+
+	public void setRace(Race race) {
+		this.race = race;
+	}
+
+	public int getFeedingTime() {
+		return feedingTime;
+	}
+
+	public void setFeedingTime(int feedingTime) {
+		this.feedingTime = feedingTime;
+	}
+
+	public int getID() {
+		return ID;
 	}
 }
